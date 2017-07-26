@@ -72,13 +72,13 @@ E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\mipmap-xx
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\R.cs.flag
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\uploadflags.txt
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\bin\Debug\Xamarin.Android.Support.v4.dll
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\bin\Debug\InvoiceJe.dll.mdb
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\XbdMerge\Xamarin.Android.Support.v4.dll.stamp
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\bin\Debug\InvoiceJe.Android.dll.mdb
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\InvoiceJe.Android.dll.mdb
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\InvoiceJe.dll.mdb
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\invoices_fragment.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\configuration_fragment.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\invoicescreate_activity.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\recyclerview_invoice.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\invoicesedit_activity.xml
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\bin\Debug\InvoiceJe.dll.mdb
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\bin\Debug\InvoiceJe.Android.dll.mdb
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\InvoiceJe.Android.dll.mdb
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\InvoiceJe.dll.mdb

@@ -1,5 +1,6 @@
 ﻿using Android.App;
 using Android.OS;
+using Android.Support.Design.Widget;
 using Android.Support.V7.App;
 using Android.Support.V7.Widget;
 using Android.Views;
@@ -32,14 +33,26 @@ namespace InvoiceJe.Droid.Activities
             var repository = new Repository();
             int invoiceId = this.Intent.Extras.GetInt("InvoiceId");
             Invoice invoice = repository.GetInvoices().Where(x => x.Id == invoiceId).FirstOrDefault();
+            
+            // To handle animations. If we don't do this, the animation will stutter upon page load.
+            TextInputLayout textInputLayoutInvoiceReferenceNumber = FindViewById<TextInputLayout>(Resource.Id.textInputLayoutInvoiceReferenceNumber);
+            TextInputLayout textInputLayoutInvoiceBillTo = FindViewById<TextInputLayout>(Resource.Id.textInputLayoutInvoiceBillTo);
+            TextInputLayout textInputLayoutInvoiceAmount = FindViewById<TextInputLayout>(Resource.Id.textInputLayoutInvoiceAmount);
+            textInputLayoutInvoiceReferenceNumber.HintAnimationEnabled = false;
+            textInputLayoutInvoiceBillTo.HintAnimationEnabled = false;
+            textInputLayoutInvoiceAmount.HintAnimationEnabled = false;
 
             TextView referenceNumberTextView = FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
             TextView billToTextView = FindViewById<TextView>(Resource.Id.invoiceBillTo);
             TextView amountTextView = FindViewById<TextView>(Resource.Id.invoiceAmount);
-
             referenceNumberTextView.Text = invoice.ReferenceNumber;
             billToTextView.Text = invoice.BillTo;
             amountTextView.Text = invoice.Amount.ToString();
+
+            // re-enable animations again
+            textInputLayoutInvoiceReferenceNumber.HintAnimationEnabled = true;
+            textInputLayoutInvoiceBillTo.HintAnimationEnabled = true;
+            textInputLayoutInvoiceAmount.HintAnimationEnabled = true;
 
         }
 
