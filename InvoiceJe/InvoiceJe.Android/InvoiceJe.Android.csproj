@@ -92,6 +92,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Activities\InvoicesCreateActivity.cs" />
+    <Compile Include="Activities\InvoicesEditActivity.cs" />
+    <Compile Include="Adapters\InvoicesRecyclerViewAdapter.cs" />
     <Compile Include="Extensions\BottomNavigationViewBehavior.cs" />
     <Compile Include="Fragments\ConfigurationFragment.cs" />
     <Compile Include="Fragments\InvoicesFragment.cs" />
@@ -117,6 +119,9 @@
       <SubType>Designer</SubType>
     </AndroidResource>
     <AndroidResource Include="Resources\layout\recyclerview_invoice.axml">
+      <SubType>Designer</SubType>
+    </AndroidResource>
+    <AndroidResource Include="Resources\layout\invoicesedit_activity.axml">
       <SubType>Designer</SubType>
     </AndroidResource>
   </ItemGroup>

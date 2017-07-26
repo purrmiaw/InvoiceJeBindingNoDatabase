@@ -8,6 +8,9 @@ using InvoiceJe.Models;
 using System.Collections.Generic;
 using System.Linq;
 using InvoiceJe.Data;
+using InvoiceJe.Droid.Adapters;
+using Android.Content;
+using InvoiceJe.Droid.Activities;
 
 namespace InvoiceJe.Droid.Fragments
 {
@@ -34,80 +37,13 @@ namespace InvoiceJe.Droid.Fragments
             return view;
         }
 
-        //void OnItemClick(object sender, int position)
+        //void OnItemClick(object sender, int invoiceId)
         //{
-        //    int photoNum = position + 1;
-        //    Toast.MakeText(this.Context, "This is invoice " + photoNum.ToString(), ToastLength.Short).Show();
+        //    Toast.MakeText(this.Context, "This is invoice " + invoiceId.ToString(), ToastLength.Short).Show();
+
+        //    //Intent intent = new Intent(this.Context, typeof(InvoicesEditActivity));
+        //    //intent.PutExtra("InvoiceId", position);
+        //    //StartActivity(intent);
         //}
     }
-
-    public class InvoiceRecyclerViewViewHolder : RecyclerView.ViewHolder
-    {
-        public TextView ReferenceNumber { get; private set; }
-        public TextView InvoiceAmount { get; private set; }
-        public TextView BillTo { get; private set; }
-
-        // A Constructor with No clicks
-        public InvoiceRecyclerViewViewHolder(View itemView) : base(itemView)
-        {
-            ReferenceNumber = itemView.FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
-            BillTo = itemView.FindViewById<TextView>(Resource.Id.billTo);
-            InvoiceAmount = itemView.FindViewById<TextView>(Resource.Id.invoiceAmount);
-        }
-
-        // A constructor with clicks
-        //public InvoiceRecyclerViewViewHolder(View itemView, Action<int> listener) : base (itemView)
-        //{
-        //    ReferenceNumber = itemView.FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
-        //    BillTo = itemView.FindViewById<TextView>(Resource.Id.billTo);
-        //    InvoiceAmount = itemView.FindViewById<TextView>(Resource.Id.invoiceAmount);
-
-        //    ItemView.Click += (sender, e) => listener(AdapterPosition);
-        //}
-    }
-
-    public class InvoicesRecyclerViewAdapter : RecyclerView.Adapter
-    {
-
-        private IEnumerable<Invoice> _invoices;
-
-        public InvoicesRecyclerViewAdapter(IEnumerable<Invoice> invoices)
-        {
-            _invoices = invoices;
-        }
-
-        public override int ItemCount => _invoices.Count();
-
-        public override void OnBindViewHolder(RecyclerView.ViewHolder holder, int position)
-        {
-            InvoiceRecyclerViewViewHolder invoiceViewHolder = holder as InvoiceRecyclerViewViewHolder;
-            invoiceViewHolder.ReferenceNumber.Text = "Invoice #" + _invoices.OrderBy(x => x.ReferenceNumber).ElementAt(position).ReferenceNumber;
-            invoiceViewHolder.BillTo.Text = _invoices.OrderBy(x => x.ReferenceNumber).ElementAt(position).BillTo.ToString();
-            invoiceViewHolder.InvoiceAmount.Text = "RM " + _invoices.OrderBy(x => x.ReferenceNumber).ElementAt(position).Amount.ToString();
-        }
-
-        public override RecyclerView.ViewHolder OnCreateViewHolder(ViewGroup parent, int viewType)
-        {
-
-            View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.recyclerview_invoice, parent, false);
-
-            //InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView, OnClick);
-            InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView);
-
-            return invoiceViewHolder;
-
-        }
-
-        //public event EventHandler<int> ItemClick;
-
-        //void OnClick(int position)
-        //{
-        //    if (ItemClick != null)
-        //    {
-        //        ItemClick(this, position);
-        //    }
-        //}
-
-    }
-
 }
