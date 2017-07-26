@@ -36,21 +36,21 @@ namespace InvoiceJe.Droid.Adapters
 
             View itemView = LayoutInflater.From(parent.Context).Inflate(Resource.Layout.recyclerview_invoice, parent, false);
 
-            InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView); // No clicks
-            //InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView, OnClick); // With clicks
+            //InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView); // No clicks
+            InvoiceRecyclerViewViewHolder invoiceViewHolder = new InvoiceRecyclerViewViewHolder(itemView, OnClick); // With clicks
 
             return invoiceViewHolder;
         }
 
-        //public event EventHandler<int> ItemClick;
+        public event EventHandler<int> ItemClick;
 
-        //void OnClick(int invoiceId)
-        //{
-        //    if (ItemClick != null)
-        //    {
-        //        ItemClick(this, invoiceId);
-        //    }
-        //}
+        void OnClick(int invoiceId)
+        {
+            if (ItemClick != null)
+            {
+                ItemClick(this, invoiceId);
+            }
+        }
 
     }
 
@@ -61,23 +61,23 @@ namespace InvoiceJe.Droid.Adapters
         public TextView BillTo { get; private set; }
         public int InvoiceId { get; set; }
 
-        // A Constructor with No clicks
-        public InvoiceRecyclerViewViewHolder(View itemView) : base(itemView)
-        {
-            ReferenceNumber = itemView.FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
-            BillTo = itemView.FindViewById<TextView>(Resource.Id.billTo);
-            InvoiceAmount = itemView.FindViewById<TextView>(Resource.Id.invoiceAmount);
-        }
-
-        ////A constructor with clicks
-        //public InvoiceRecyclerViewViewHolder(View itemView, Action<int> listener) : base(itemView)
+        //// A Constructor with No clicks
+        //public InvoiceRecyclerViewViewHolder(View itemView) : base(itemView)
         //{
         //    ReferenceNumber = itemView.FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
         //    BillTo = itemView.FindViewById<TextView>(Resource.Id.billTo);
         //    InvoiceAmount = itemView.FindViewById<TextView>(Resource.Id.invoiceAmount);
-
-        //    //ItemView.Click += (sender, e) => listener(InvoiceId);
         //}
+
+        //A constructor with clicks
+        public InvoiceRecyclerViewViewHolder(View itemView, Action<int> listener) : base(itemView)
+        {
+            ReferenceNumber = itemView.FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
+            BillTo = itemView.FindViewById<TextView>(Resource.Id.billTo);
+            InvoiceAmount = itemView.FindViewById<TextView>(Resource.Id.invoiceAmount);
+
+            ItemView.Click += (sender, e) => listener(InvoiceId);
+        }
     }
 
 }

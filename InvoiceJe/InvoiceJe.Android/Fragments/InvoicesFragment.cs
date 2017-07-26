@@ -27,7 +27,7 @@ namespace InvoiceJe.Droid.Fragments
             LinearLayoutManager layoutManager = new LinearLayoutManager(view.Context);
             recyclerView.SetLayoutManager(layoutManager);
             InvoicesRecyclerViewAdapter adapter = new InvoicesRecyclerViewAdapter(invoices);
-            //adapter.ItemClick += OnItemClick; // register onItemClick
+            adapter.ItemClick += OnItemClick; // register onItemClick
             recyclerView.SetAdapter(adapter);
 
             // divider
@@ -37,13 +37,13 @@ namespace InvoiceJe.Droid.Fragments
             return view;
         }
 
-        //void OnItemClick(object sender, int invoiceId)
-        //{
-        //    Toast.MakeText(this.Context, "This is invoice " + invoiceId.ToString(), ToastLength.Short).Show();
+        void OnItemClick(object sender, int invoiceId)
+        {
+            Toast.MakeText(this.Context, "This is invoice " + invoiceId.ToString(), ToastLength.Short).Show();
 
-        //    //Intent intent = new Intent(this.Context, typeof(InvoicesEditActivity));
-        //    //intent.PutExtra("InvoiceId", position);
-        //    //StartActivity(intent);
-        //}
+            //Intent intent = new Intent(this.Context, typeof(InvoicesEditActivity));
+            //intent.PutExtra("InvoiceId", position);
+            //StartActivity(intent);
+        }
     }
 }
