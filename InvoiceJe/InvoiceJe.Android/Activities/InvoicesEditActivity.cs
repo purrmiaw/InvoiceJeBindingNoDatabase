@@ -29,17 +29,17 @@ namespace InvoiceJe.Droid.Activities
                 SupportActionBar.SetDisplayHomeAsUpEnabled(true);
             }
 
-            //var repository = new Repository();
-            //int invoiceId = bundle.GetInt("InvoiceId");
-            //Invoice invoice = repository.GetInvoices().Where(x => x.Id == invoiceId).FirstOrDefault();
+            var repository = new Repository();
+            int invoiceId = this.Intent.Extras.GetInt("InvoiceId");
+            Invoice invoice = repository.GetInvoices().Where(x => x.Id == invoiceId).FirstOrDefault();
 
-            //TextView referenceNumberTextView = FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
-            //TextView billToTextView = FindViewById<TextView>(Resource.Id.invoiceBillTo);
-            //TextView amountTextView = FindViewById<TextView>(Resource.Id.invoiceAmount);
+            TextView referenceNumberTextView = FindViewById<TextView>(Resource.Id.invoiceReferenceNumber);
+            TextView billToTextView = FindViewById<TextView>(Resource.Id.invoiceBillTo);
+            TextView amountTextView = FindViewById<TextView>(Resource.Id.invoiceAmount);
 
-            //referenceNumberTextView.Text = invoice.ReferenceNumber;
-            //billToTextView.Text = invoice.BillTo;
-            //amountTextView.Text = invoice.Amount;
+            referenceNumberTextView.Text = invoice.ReferenceNumber;
+            billToTextView.Text = invoice.BillTo;
+            amountTextView.Text = invoice.Amount.ToString();
 
         }
 

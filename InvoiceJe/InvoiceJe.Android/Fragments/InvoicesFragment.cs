@@ -39,11 +39,11 @@ namespace InvoiceJe.Droid.Fragments
 
         void OnItemClick(object sender, int invoiceId)
         {
-            Toast.MakeText(this.Context, "This is invoice " + invoiceId.ToString(), ToastLength.Short).Show();
+            //Toast.MakeText(this.Context, "This is invoice " + invoiceId.ToString(), ToastLength.Short).Show();
 
-            //Intent intent = new Intent(this.Context, typeof(InvoicesEditActivity));
-            //intent.PutExtra("InvoiceId", position);
-            //StartActivity(intent);
+            Intent intent = new Intent(this.Context, typeof(InvoicesEditActivity));
+            intent.PutExtra("InvoiceId", invoiceId);
+            StartActivity(intent);
         }
     }
 }
