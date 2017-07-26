@@ -80,3 +80,4 @@ E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\asset
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\invoices_fragment.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\configuration_fragment.xml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\invoicescreate_activity.xml
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\res\layout\recyclerview_invoice.xml

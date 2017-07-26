@@ -21,11 +21,11 @@ E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\asset
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\Xamarin.Android.Support.Vector.Drawable.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Runtime.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.ComponentModel.Composition.dll
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Threading.dll
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Collections.dll
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Threading.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Collections.Concurrent.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Reflection.dll
-E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Diagnostics.Debug.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Linq.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Runtime.InteropServices.dll
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.Android\obj\Debug\android\assets\System.Runtime.Extensions.dll
