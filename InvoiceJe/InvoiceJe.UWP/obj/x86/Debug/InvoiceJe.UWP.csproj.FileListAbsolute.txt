@@ -222,3 +222,8 @@ E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\Invoice
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesCreatePage.g.cs
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesCreatePage.xaml
 E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesCreatePage.xbf
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesEditPage.g.i.cs
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesEditPage.g.cs
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesEditPage.xaml
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\obj\x86\Debug\Views\InvoicesEditPage.xbf
+E:\_programming\ij\InvoiceJe\InvoiceJe\InvoiceJe.UWP\bin\x86\Debug\Views\InvoicesEditPage.xbf

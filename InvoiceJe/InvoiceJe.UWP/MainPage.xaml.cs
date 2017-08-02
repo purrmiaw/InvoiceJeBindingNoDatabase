@@ -1,4 +1,7 @@
-﻿using InvoiceJe.UWP.Views;
+﻿using InvoiceJe.Data;
+using InvoiceJe.Models;
+using InvoiceJe.UWP.Views;
+using System.Linq;
 using Windows.ApplicationModel.Core;
 using Windows.UI.Core;
 using Windows.UI.ViewManagement;
@@ -24,6 +27,11 @@ namespace InvoiceJe.UWP
             ApplicationViewTitleBar titleBar = ApplicationView.GetForCurrentView().TitleBar;
             titleBar.ButtonBackgroundColor = null; // by setting this to null, it gets the default value
             titleBar.ButtonInactiveBackgroundColor = null; // by setting this to null, it gets the default value
+
+            // repository
+            var repository = new Repository();
+            InvoicesListView.ItemsSource = repository.GetInvoices().ToList();
+
         }
 
         protected override void OnNavigatedTo(NavigationEventArgs e)
@@ -43,6 +51,12 @@ namespace InvoiceJe.UWP
     AppViewBackButtonVisibility.Collapsed;
             }
 
+        }
+
+        private void InvoicesListView_Click(object sender, ItemClickEventArgs e)
+        {
+            Invoice invoice = (Invoice)e.ClickedItem;
+            Frame.Navigate(typeof(InvoicesEditPage), invoice.Id);
         }
 
         private void AppBarButton_Click(object sender, RoutedEventArgs e)

@@ -156,17 +156,19 @@ namespace InvoiceJe.UWP.InvoiceJe_UWP_XamlTypeInfo
 
         private void InitTypeTables()
         {
-            _typeNameTable = new string[4];
+            _typeNameTable = new string[5];
             _typeNameTable[0] = "InvoiceJe.UWP.MainPage";
             _typeNameTable[1] = "Windows.UI.Xaml.Controls.Page";
             _typeNameTable[2] = "Windows.UI.Xaml.Controls.UserControl";
             _typeNameTable[3] = "InvoiceJe.UWP.Views.InvoicesCreatePage";
+            _typeNameTable[4] = "InvoiceJe.UWP.Views.InvoicesEditPage";
 
-            _typeTable = new global::System.Type[4];
+            _typeTable = new global::System.Type[5];
             _typeTable[0] = typeof(global::InvoiceJe.UWP.MainPage);
             _typeTable[1] = typeof(global::Windows.UI.Xaml.Controls.Page);
             _typeTable[2] = typeof(global::Windows.UI.Xaml.Controls.UserControl);
             _typeTable[3] = typeof(global::InvoiceJe.UWP.Views.InvoicesCreatePage);
+            _typeTable[4] = typeof(global::InvoiceJe.UWP.Views.InvoicesEditPage);
         }
 
         private int LookupTypeIndexByName(string typeName)
@@ -203,6 +205,7 @@ namespace InvoiceJe.UWP.InvoiceJe_UWP_XamlTypeInfo
 
         private object Activate_0_MainPage() { return new global::InvoiceJe.UWP.MainPage(); }
         private object Activate_3_InvoicesCreatePage() { return new global::InvoiceJe.UWP.Views.InvoicesCreatePage(); }
+        private object Activate_4_InvoicesEditPage() { return new global::InvoiceJe.UWP.Views.InvoicesEditPage(); }
 
         private global::Windows.UI.Xaml.Markup.IXamlType CreateXamlType(int typeIndex)
         {
@@ -232,6 +235,13 @@ namespace InvoiceJe.UWP.InvoiceJe_UWP_XamlTypeInfo
             case 3:   //  InvoiceJe.UWP.Views.InvoicesCreatePage
                 userType = new global::InvoiceJe.UWP.InvoiceJe_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
                 userType.Activator = Activate_3_InvoicesCreatePage;
+                userType.SetIsLocalType();
+                xamlType = userType;
+                break;
+
+            case 4:   //  InvoiceJe.UWP.Views.InvoicesEditPage
+                userType = new global::InvoiceJe.UWP.InvoiceJe_UWP_XamlTypeInfo.XamlUserType(this, typeName, type, GetXamlTypeByName("Windows.UI.Xaml.Controls.Page"));
+                userType.Activator = Activate_4_InvoicesEditPage;
                 userType.SetIsLocalType();
                 xamlType = userType;
                 break;

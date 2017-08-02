@@ -103,6 +103,9 @@
     <Compile Include="Views\InvoicesCreatePage.xaml.cs">
       <DependentUpon>InvoicesCreatePage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\InvoicesEditPage.xaml.cs">
+      <DependentUpon>InvoicesEditPage.xaml</DependentUpon>
+    </Compile>
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
@@ -130,6 +133,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="Views\InvoicesCreatePage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\InvoicesEditPage.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

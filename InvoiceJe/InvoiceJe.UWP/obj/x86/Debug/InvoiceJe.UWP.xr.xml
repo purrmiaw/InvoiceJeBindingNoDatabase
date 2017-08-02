@@ -1,5 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Roots >
+  <Roots.PropertyPathNames>
+    <RootPropertyPathName Name="ReferenceNumber" />
+  </Roots.PropertyPathNames>
   <Roots.RootTypes>
     <RootType FullName="Windows.UI.Xaml.Application" />
     <RootType FullName="Windows.UI.Xaml.Controls.Page">
@@ -25,6 +28,10 @@
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.PivotItem">
       <RootProperty Name="Header" />
+      <RootProperty Name="Margin" />
+      <RootProperty Name="Content" />
+    </RootType>
+    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
       <RootProperty Name="Content" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.StackPanel">
@@ -42,9 +49,11 @@
       <RootProperty Name="Header" />
       <RootProperty Name="Margin" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ScrollViewer">
+    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
       <RootProperty Name="Margin" />
-      <RootProperty Name="Content" />
+      <RootProperty Name="IsItemClickEnabled" />
+      <RootProperty Name="ItemTemplate" />
+      <RootEvent Name="ItemClick" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.CommandBar">
       <RootProperty Name="HorizontalAlignment" />
@@ -57,14 +66,16 @@
       <RootProperty Name="Label" />
       <RootEvent Name="Click" />
     </RootType>
-    <RootType FullName="Windows.UI.Xaml.Controls.ListView">
-      <RootProperty Name="Items" />
+    <RootType FullName="Windows.UI.Xaml.DataTemplate">
+      <RootProperty Name="Template" />
     </RootType>
+    <RootType FullName="Windows.UI.Xaml.Data.Binding" />
     <RootType FullName="InvoiceJe.UWP.MainPage" />
     <RootType FullName="Windows.UI.Xaml.Controls.TextBox">
       <RootProperty Name="TextWrapping" />
       <RootProperty Name="Height" />
       <RootProperty Name="Margin" />
+      <RootProperty Name="Text" />
     </RootType>
     <RootType FullName="Windows.UI.Xaml.Controls.DatePicker">
       <RootProperty Name="Height" />
@@ -72,5 +83,9 @@
       <RootProperty Name="HorizontalAlignment" />
     </RootType>
     <RootType FullName="InvoiceJe.UWP.Views.InvoicesCreatePage" />
+    <RootType FullName="Microsoft.Xaml.DirectUI.ProxyTypes.BindExtension">
+      <RootProperty Name="Mode" />
+    </RootType>
+    <RootType FullName="InvoiceJe.UWP.Views.InvoicesEditPage" />
   </Roots.RootTypes>
 </Roots>
